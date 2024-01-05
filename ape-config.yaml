@@ -11,6 +11,12 @@ dependencies:
   - name: solmate
     github: transmissions11/solmate
     ref: "v6"
+    config_overrides:
+      contracts_folder: src
+      compile:
+        exclude: 
+          - ./test/utils/*
+
 
 solidity:
   version: 0.8.23
