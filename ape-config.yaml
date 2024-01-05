@@ -5,18 +5,29 @@ plugins:
     version: 0.7.0
 
 dependencies:
-  - name: smartcontractkit
-    github: smartcontractkit/chainlink-brownie-contracts
-    version: 0.8.0
+  # - name: openzeppelin
+  #   github: eth-optimism/contracts
+  #   ref: 4.3.3
+
+  # - name: openzeppelin-contracts-upgradeable
+  #   gituhb: openzeppelin/contracts-upgradeable-4.7.3
+    
+  # - name: ethoptimism
+  #   github: eth-optimism/contracts
+  #   ref: 0.5.21
+
+  # - name: smartcontractkit
+  #   github: smartcontractkit/chainlink-brownie-contracts
+  #   version: 0.8.0
+
   - name: solmate
     github: transmissions11/solmate
     ref: "v6"
-    config_overrides:
-      contracts_folder: src
+    contracts_folder: src
+    config_override:
       compile:
         exclude: 
           - ./test/utils/*
-
 
 solidity:
   version: 0.8.23
