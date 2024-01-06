@@ -5,15 +5,17 @@ plugins:
     version: 0.7.0
 
 dependencies:
-  - name: smartcontractkit
-    github: smartcontractkit/chainlink-brownie-contracts
-    version: 0.8.0
   - name: solmate
     github: transmissions11/solmate
     ref: "v6"
+    contracts_folder: src
+    config_override:
+      compile:
+        exclude: 
+          - ./test/utils/*
+
 
 solidity:
   version: 0.8.23
   import_remapping:
-    - "@chainlink/contracts=smartcontractkit/0.8.0"
-    - "@solmate=solmate/6"
+    - "@solmate=solmate/v6"
